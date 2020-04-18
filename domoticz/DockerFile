@@ -1,0 +1,10 @@
+FROM debian:buster
+ADD ./domoticz-2020.1.tar.gz /opt
+
+VOLUME /data
+
+RUN apt-get update
+RUN apt-get install -y libusb-0.1 libcurl4 libpython3-dev
+
+WORKDIR /opt/domoticz
+CMD ./domoticz -www 8081 -sslwww 8443 -log /data/logs/domoticz.log -wwwroot /opt/domoticz/www -dbase /data/conf/domoticz.db -noupdates
