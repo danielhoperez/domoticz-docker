@@ -2,7 +2,7 @@
 
 There are a couple of docker images here:
 
-domoticz-build
+## domoticz-build
 
 This is meant to build domoticz and save the package to /output then this package can be used to create the actual domoticz docker 
 
