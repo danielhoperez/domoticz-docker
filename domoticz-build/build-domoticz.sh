@@ -17,13 +17,12 @@ cd /opt/open-zwave
 git checkout ${OPENZWAVE_VERSION_TAG}
 make -j 3
 cd /opt/
-git clone https://github.com/domoticz/domoticz.git
-cd /opt/domoticz
+git clone https://github.com/domoticz/domoticz.git domoticz-src
+cd /opt/domoticz-src
 git checkout ${DOMOTICZ_VERSION_TAG}
-cd /opt/domoticz
-cmake -DCMAKE_BUILD_TYPE=Release CMakeLists.txt
+cmake -DCMAKE_INSTALL_PREFIX=/opt/domoticz -DCMAKE_BUILD_TYPE=Release CMakeLists.txt
 make -j 3
-
+make install
 mkdir -p /opt/domoticz/conf
 rm -rf /opt/domoticz/.git
 cd /opt/

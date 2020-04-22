@@ -11,6 +11,6 @@ RUN apt-get install git -y
 RUN apt-get install build-essential -y
 RUN apt-get install libboost-dev libboost-thread-dev libboost-system-dev libsqlite3-dev subversion curl libcurl4-openssl-dev libusb-dev libudev-dev zlib1g-dev libssl-dev wget python3-dev -y
 RUN apt remove --purge --auto-remove cmake
-ADD build.sh /tmp
-CMD /tmp/build.sh
+ADD build-domoticz.sh /tmp
+CMD /tmp/build-domoticz.sh
 
