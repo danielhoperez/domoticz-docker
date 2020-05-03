@@ -9,7 +9,7 @@ VOLUME /output
 RUN apt-get update
 RUN apt-get install git -y
 RUN apt-get install build-essential -y
-RUN apt-get install libboost-dev libboost-thread-dev libboost-system-dev libsqlite3-dev subversion curl libcurl4-openssl-dev libusb-dev libudev-dev zlib1g-dev libssl-dev wget python3-dev liblua5.3-dev libcereal-dev -y
+RUN apt-get install libboost-dev libboost-thread-dev libboost-system-dev libsqlite3-dev subversion curl libcurl4-openssl-dev libusb-dev libudev-dev zlib1g-dev libssl-dev wget python3-dev liblua5.3-dev libcereal-dev uthash-dev -y
 RUN apt remove --purge --auto-remove cmake
 ADD build-domoticz.sh /tmp
 RUN chmod 755 /tmp/build-domoticz.sh
