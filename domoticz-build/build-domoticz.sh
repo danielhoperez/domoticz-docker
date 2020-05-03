@@ -16,6 +16,7 @@ ln -s open-zwave open-zwave-read-only
 cd /opt/open-zwave
 git checkout ${OPENZWAVE_VERSION_TAG}
 make -j 3
+make install
 cd /opt/
 git clone https://github.com/domoticz/domoticz.git domoticz-src
 cd /opt/domoticz-src
