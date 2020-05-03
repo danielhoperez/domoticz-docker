@@ -22,6 +22,10 @@ git clone https://github.com/domoticz/domoticz.git domoticz-src
 cd /opt/domoticz-src
 git checkout ${DOMOTICZ_VERSION_TAG}
 cmake -DCMAKE_INSTALL_PREFIX=/opt/domoticz -DCMAKE_BUILD_TYPE=Release CMakeLists.txt
+cd  /opt/domoticz-src/extern/mosquitto/man
+git checkout Makefile
+make
+cd /opt/domoticz-src
 make -j 3
 make install
 mkdir -p /opt/domoticz/conf
