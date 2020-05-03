@@ -1,5 +1,6 @@
 FROM debian:buster
-ADD ./domoticz-2020.1.tar.gz /opt
+ARG domoticz_version=2020.1
+ADD ./domoticz-${domoticz_version}.tar.gz /opt
 
 VOLUME /data
 
