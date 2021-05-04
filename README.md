@@ -8,6 +8,14 @@ This is meant to build domoticz and save the package to /output then this packag
 
 it should be run like docker run -v [OUTPUT_DIR]:/output danielhoperez/domoticz-builder
 
+For instance in order to build the latest (as of 03/05/2021) image:
+docker run --env DOMOTICZ_VERSION_TAG=2021.1 -v /tmp/domoticz/:/output danielhoperez/domoticz-builder:2020.2-3
+
+This will create a tar.gz file in /tmp/domoticz with the compiled version ready to be installed
+The tar.gz file can also at a later point be used to create a docker image
+
+
+
 The following env variables can be setup to control components version
 * ENV DOMOTICZ_VERSION_TAG
 * ENV CMAKE_VERSION
